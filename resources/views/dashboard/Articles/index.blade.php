@@ -1,11 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
+
     <div class="container mx-auto px-5 py-4">
         <div class="py-5" x-data="{ isSearchbarActive: false }"
             x-effect="$store.breakpoints.smAndUp &amp;&amp; (isSearchbarActive = false)">
             <div x-show="!isSearchbarActive" class="flex items-center justify-between">
                 <div>
+                    <h1>delete</h1>
                     <div class="flex space-x-2">
                         <p class="text-xl font-medium text-slate-800 dark:text-navy-50">
                             Article Management

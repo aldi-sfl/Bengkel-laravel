@@ -36,14 +36,14 @@
                 </a>
 
                 <!-- Pages And Layouts -->
-                <a href="{{ url('/booking-admin') }}"
+                {{-- <a href="{{ url('/booking-admin') }}"
                     class="{{ Request::is('booking-admin*') ? 'bg-primary/10 text-primary' : ''}} flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'Booking list'">
                     <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                         <path d="M0 96C0 43 43 0 96 0h96V190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5V0h32 32c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32H384 96c-53 0-96-43-96-96V96zM64 416c0 17.7 14.3 32 32 32H352V384H96c-17.7 0-32 14.3-32 32z"
                         fill="currentColor"/>
                     </svg>
-                </a>
+                </a> --}}
 
                 <a href="{{ url('transaction-list') }}"
                     class="{{ Request::is('transaction-list*') ? 'bg-primary/10 text-primary' : ''}} flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
@@ -56,7 +56,7 @@
                 </a>
 
                 <!-- Forms -->
-                <a href="{{ url('articles') }}"
+                {{-- <a href="{{ url('articles') }}"
                     class="{{ Request::is('articles*') ? 'bg-primary/10 text-primary' : ''}} flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'Article'">
                     <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -64,7 +64,7 @@
                             d="M96 96c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H80c-44.2 0-80-35.8-80-80V128c0-17.7 14.3-32 32-32s32 14.3 32 32V400c0 8.8 7.2 16 16 16s16-7.2 16-16V96zm64 24v80c0 13.3 10.7 24 24 24H296c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24H184c-13.3 0-24 10.7-24 24zm208-8c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zM160 304c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z"
                             fill="currentColor" />
                     </svg>
-                </a>
+                </a> --}}
                 
                 <a href="{{ url('list_chat') }}"
                     class="{{ Request::is('list_chat*') ? 'bg-primary/10 text-primary' : ''}} flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"

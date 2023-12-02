@@ -23,7 +23,7 @@
 
                     <section class="home">
                         <div class="home-text ">
-                            <p class="animate-text">
+                            <p class="animate-text ease-in-out duration-700">
                                 <span>Berkualitas</span>
                                 <span>Terbaik</span>
                                 <span>Terjangkau</span>
@@ -160,7 +160,7 @@
             </div>
         </section>
 
-        <h2 style="text-align: center;" class="text-4xl font-extrabold mb-10 dark:text-white">Apa kata mereka?</h2>
+        {{-- <h2 style="text-align: center;" class="text-4xl font-extrabold mb-10 dark:text-white">Apa kata mereka?</h2>
         <div class="container mx-auto px-2">
             <div class="flex gap-4 sm:card-width-50 md:card-width-75 lg:card-width-100">
                 @foreach (json_decode($userReview) as $item)
@@ -187,7 +187,7 @@
                     </div>
                 @endforeach
             </div>
-        </div>
+        </div> --}}
 
         <div id="drawer-contact"
             class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-1/3 dark:bg-gray-800"
@@ -235,7 +235,7 @@
             
         </div>
         {{-- ceck --}}
-        <section class="py-12">
+        {{-- <section class="py-12">
             <div class="container mx-auto px-2">
                 <h2 style="text-align: center;" class="text-4xl font-extrabold mb-5 dark:text-white">Artikel Terbaru</h2>
                 <div class="flex gap-10">
@@ -279,7 +279,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="py-20">
             <div class="container mx-auto px-2">

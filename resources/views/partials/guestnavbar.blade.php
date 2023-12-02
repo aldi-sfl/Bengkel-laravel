@@ -81,9 +81,9 @@
         <nav class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="navigation flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 dark:text-white">
                 <li><a href="{{ url('/') }}" class="nav-item block py-2 pl-3 pr-4 text-gray-900 dark:text-white" data-nav="beranda">Beranda</a></li>
-                <li><a href="{{ url('/articles') }}" class="nav-item block py-2 pl-3 pr-4 text-gray-900 dark:text-white" data-nav="artikel">Artikel</a></li>
+                {{-- <li><a href="{{ url('/articles') }}" class="nav-item block py-2 pl-3 pr-4 text-gray-900 dark:text-white" data-nav="artikel">Artikel</a></li> --}}
                 <li><a href="{{ url('/product-list') }}" class="nav-item block py-2 pl-3 pr-4 text-gray-900 dark:text-white" data-nav="daftarproduk">Daftar Produk</a></li>
-                <li><a href="{{ url('/booking') }}" class="nav-item block py-2 pl-3 pr-4 text-gray-900dark:text-white" data-nav="booking">Booking</a></li>
+                {{-- <li><a href="{{ url('/booking') }}" class="nav-item block py-2 pl-3 pr-4 text-gray-900dark:text-white" data-nav="booking">Booking</a></li> --}}
             </ul>
         </nav>
 

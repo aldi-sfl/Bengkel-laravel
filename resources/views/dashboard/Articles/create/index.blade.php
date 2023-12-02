@@ -1,7 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
+
     <div class="container mx-auto px-5 py-4">
+        <h1>DELETE</h1>
         <form action="{{ route('articles.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-6">
@@ -24,7 +26,7 @@
                             </path>
                         </svg>
                         <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-                                upload</span> or drag and drop</p>
+                                upload</span> or </p>
                         <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                     </div>
                     <input id="dropzone-file" name="image" type="file" class="hidden" />

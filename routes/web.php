@@ -39,15 +39,15 @@ use App\Http\Controllers\vendor\Chatify\MessagesController;
 
 Route::get('/', function () {
     
-    $userReview = file_get_contents(base_path('resources/json/user_review.json'));
-    $articles = Article::with('likes')->take(3)->get();
-    return view('dashboard', compact('articles', 'userReview'));
+    // $userReview = file_get_contents(base_path('resources/json/user_review.json'));
+    // $articles = Article::with('likes')->take(3)->get();
+    return view('dashboard'/* , compact('articles', 'userReview') */);
 })->name('home');
 
 Route::get('/home', function () {
-    $userReview = file_get_contents(base_path('resources/json/user_review.json'));
-    $articles = Article::with('likes')->take(3)->get();
-    return view('dashboard', compact('articles', 'userReview'));
+    // $userReview = file_get_contents(base_path('resources/json/user_review.json'));
+    // $articles = Article::with('likes')->take(3)->get();
+    return view('dashboard'/* , compact('articles', 'userReview') */);
 });
 
 
@@ -81,25 +81,25 @@ Route::middleware(['admin'])->group(function () {
     Route::put('/product/{id}', [ProductController::class, 'update']);
     Route::delete('/product/{id}', [ProductController::class, 'destroy']);
     // article
-    Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
-    Route::post('articles', [ArticleController::class, 'store'])->name('articles.store');
-    Route::get('articles/create', [ArticleController::class, 'create'])->name('articles.create');
-    Route::get('articles/{article:slug}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
-    Route::get('articles/{article:slug}', [ArticleController::class, 'showArticle'])->name('articles.show');
-    Route::put('articles/{article:slug}', [ArticleController::class, 'update'])->name('articles.update');
-    Route::delete('articles/{article:slug}', [ArticleController::class, 'destroy'])->name('articles.destroy');
-    Route::post('comment', [CommentController::class, 'store'])->name('comment.store');
-    Route::delete('comment/{comment}', [CommentController::class, 'destroy'])->name('comment.destroy');
-    Route::put('comment/{comment}', [CommentController::class, 'update'])->name('comment.update');
-    Route::post('like', [LikeController::class, 'store'])->name('like.store');
-    // booking
-    Route::get('/booking-admin', [BookingAdminController::class, 'index']);
-    Route::get('/booking-admin/{id}/edit', [BookingAdminController::class, 'edit']);
-    Route::post('/booking-admin/{id}', [BookingAdminController::class, 'update']);
-    Route::delete('/booking-admin/{id}', [BookingAdminController::class, 'destroy']);
+    // Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
+    // Route::post('articles', [ArticleController::class, 'store'])->name('articles.store');
+    // Route::get('articles/create', [ArticleController::class, 'create'])->name('articles.create');
+    // Route::get('articles/{article:slug}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
+    // Route::get('articles/{article:slug}', [ArticleController::class, 'showArticle'])->name('articles.show');
+    // Route::put('articles/{article:slug}', [ArticleController::class, 'update'])->name('articles.update');
+    // Route::delete('articles/{article:slug}', [ArticleController::class, 'destroy'])->name('articles.destroy');
+    // Route::post('comment', [CommentController::class, 'store'])->name('comment.store');
+    // Route::delete('comment/{comment}', [CommentController::class, 'destroy'])->name('comment.destroy');
+    // Route::put('comment/{comment}', [CommentController::class, 'update'])->name('comment.update');
+    // Route::post('like', [LikeController::class, 'store'])->name('like.store');
+    // // booking
+    // Route::get('/booking-admin', [BookingAdminController::class, 'index']);
+    // Route::get('/booking-admin/{id}/edit', [BookingAdminController::class, 'edit']);
+    // Route::post('/booking-admin/{id}', [BookingAdminController::class, 'update']);
+    // Route::delete('/booking-admin/{id}', [BookingAdminController::class, 'destroy']);
     //chat
     Route::get('/list_chat', [MessagesController::class, 'index_admin']);
-    // user all
+    // user alll
     Route::get('/user', [ProfileController::class, 'getData'])->name('user.index');
     Route::view('/transaction-list', 'dashboard.transaction.transaction-list');
 });
@@ -110,16 +110,16 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/cart-list', 'dashboard.cart.cart_list');
     Route::view('/transaction', 'dashboard.transaction.transaction');
     // article
-    Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
-    Route::get('articles/{article:slug}', [ArticleController::class, 'showArticle'])->name('articles.show');
-    Route::post('comment', [CommentController::class, 'store'])->name('comment.store');
-    Route::delete('comment/{comment}', [CommentController::class, 'destroy'])->name('comment.destroy');
-    Route::put('comment/{comment}', [CommentController::class, 'update'])->name('comment.update');
-    Route::post('like', [LikeController::class, 'store'])->name('like.store');
-    // booking
-    Route::get('/booking', [BookingController::class, 'index']);
-    Route::get('/booking/create', [BookingController::class, 'create']);
-    Route::post('/booking', [BookingController::class, 'store']);
+    // Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
+    // Route::get('articles/{article:slug}', [ArticleController::class, 'showArticle'])->name('articles.show');
+    // Route::post('comment', [CommentController::class, 'store'])->name('comment.store');
+    // Route::delete('comment/{comment}', [CommentController::class, 'destroy'])->name('comment.destroy');
+    // Route::put('comment/{comment}', [CommentController::class, 'update'])->name('comment.update');
+    // Route::post('like', [LikeController::class, 'store'])->name('like.store');
+    // // booking
+    // Route::get('/booking', [BookingController::class, 'index']);
+    // Route::get('/booking/create', [BookingController::class, 'create']);
+    // Route::post('/booking', [BookingController::class, 'store']);
 
     // profile
     Route::get('/profile', [ProfileController::class, 'index']);
