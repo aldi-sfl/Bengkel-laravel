@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Faker\Factory;
 use App\Models\User;
-use App\Models\Article;
+
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         
         Category::factory(5)->create();
         Product::factory(5)->create();
-        Article::factory(5)->create();
+        
         
         DB::table('users')->insert([
             [
@@ -38,8 +38,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::create([
-            'name'=>'haikal',
-            'email'=>'haikal@gmail.com',
+            'name'=>'aldi',
+            'email'=>'aldi@gmail.com',
             'password'=>Hash::make('12345'),
         ]);
 

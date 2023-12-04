@@ -210,9 +210,7 @@
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 <a href="#" class="hover:underline"></a>021-456-7890</a>
             </p> --}}
-            @if(auth()->check())
-            @include('dashboard.chat.customer')
-        @else
+           
             {{-- <a href="{{ route('login') }}">Login</a> --}}
             
         <div class="w-full p-4 text-center bg-white  sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -230,7 +228,7 @@
             </div>
         </div>
 
-        @endif
+        
         
             
         </div>

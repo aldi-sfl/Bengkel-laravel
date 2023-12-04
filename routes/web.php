@@ -9,20 +9,20 @@ use Illuminate\Support\Facades\Auth;
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LikeController;
+// use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\LikeController;
 
 
 
 use App\Http\Livewire\Auth\PasswordReset;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\BookingController;
-use App\Http\Controllers\CommentController;
+// use App\Http\Controllers\ArticleController;
+// use App\Http\Controllers\BookingController;
+// use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Auth\PwdResetConfirm;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\BookingAdminController;
+// use App\Http\Controllers\BookingAdminController;
 
 use App\Http\Controllers\vendor\Chatify\MessagesController;
 
@@ -63,6 +63,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', Register::class)->name('register');
     Route::get('/forgot-password', PasswordReset::class)->name('forgot-password');
     Route::get('/confirm-reset', PwdResetConfirm::class)->name('confirm-reset');
+    Route::get('/product-list', [ProductController::class, 'list_product'])->name('product-list');
+    Route::view('/detail_produk', 'dashboard.product.product_detail');
 });
 
 
@@ -126,7 +128,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile', [ProfileController::class, 'update'])->name('profile_update');
     Route::view('/user-transaction-list', 'dashboard.transaction.user-transaction-list');
     
-    Route::get('/home', [MessagesController::class, 'index'])->name('home');
+    // Route::get('/home', [MessagesController::class, 'index'])->name('home');
 });
 
 
